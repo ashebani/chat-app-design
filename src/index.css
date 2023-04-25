@@ -1,13 +1,45 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+:root,
+.app {
+  height: 100%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: "Rubik", sans-serif;
 }
+
+.recieved {
+  @apply rounded-verylarge rounded-bl-md bg-secondaryLightGrayishViolet text-primaryModerateViolet text-xs p-3 mx-4 my-1;
+  max-width: 27ch;
+}
+/* .recieved-desktop {
+  @apply rounded-verylarge rounded-bl-md bg-secondaryLightGrayishViolet text-sm  text-primaryModerateViolet p-3 mx-4 my-2;
+  max-width: 27ch;
+} */
+
+.sent {
+  @apply rounded-verylarge rounded-br-md justify-self-end bg-white text-primaryDesaturatedDarkViolet text-xs p-3 mx-4 my-1;
+  max-width: 27ch;
+}
+/* .sent-desktop {
+  @apply rounded-verylarge rounded-br-md justify-self-end text-sm bg-white text-primaryDesaturatedDarkViolet p-3 mx-4 my-2;
+  max-width: 27ch;
+} */
+
+.service {
+  @apply rounded-verylarge flex justify-between px-6 py-2 items-center rounded-bl-md bg-gradient-to-r from-fuchsia-500 to-purple-600 text-white;
+  max-width: 30ch;
+  height: 50px;
+}
+/* .service-desktop {
+  @apply rounded-verylarge flex justify-between px-10 py-7 items-center rounded-bl-md bg-gradient-to-r from-fuchsia-500 to-purple-600 text-white;
+  max-width: 35ch;
+  height: 50px;
+} */
